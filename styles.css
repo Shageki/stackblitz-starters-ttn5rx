@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: arial, sans-serif;
-  color: black;
-  background-color: white;
+  color: #131C26;
+  background-color: #FFF7EE;
 }
 
 nav {
@@ -47,6 +47,7 @@ h1 {
 
 header {
   display: flex;
+  background: #C7B65E;
 }
 
 footer {
@@ -57,7 +58,28 @@ footer {
 .footer-center-column {
   flex-grow: 1;
 }
+
 .footer-left-column,
 .footer-right-column {
   width: 20%;
+}
+
+
+.item-list-widget {}
+
+.item-list-options {
+  display: flex;
+}
+
+.item-list-option {
+  margin: 0 10px 0 0;
+  text-decoration: underline;
+}
+
+.item-list-option :hover {
+  color: red;
+}
+
+td~td {
+  text-align: right;
 }
