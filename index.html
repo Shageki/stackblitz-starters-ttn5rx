@@ -10,48 +10,277 @@
 </head>
 
 <body>
+
   <header>
-    <div class="header-left-column"><img class="header-logo"
-        src="Images/Client3_LogoPalette1_FFF7EE.png"></div>
-    <div class="header-right-column">
-      <h2>Book Haven Bookstore</h2>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </div>
-  </header>
-  <main>
-    <h1>Home page</h1>
-    <div class="item-list-widget">
-      <div class="item-list-options">
-        <div class="item-list-option">Top sellers</div>
-        <div class="item-list-option">New releases</div>
-        <div class="item-list-option">Sales</div>
+    <div class="header-container">
+      <!-- Logo on the left -->
+      <div class="logo">
+
+        <img src="Images/Client3_LogoPalette1_FFF7EE.png" alt="Book Haven Bookstore Logo">
+      </div>
+
+      <!-- Store Name and Navigation Links -->
+      <div class="header-content">
+        <!-- Store Name -->
+        <h1>Book Haven Bookstore</h1>
+
+        <!-- Navigation Links -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <table>
-      <tr>
-        <td>Item Name</td><td>Oct 24, 2024</td>
-      </tr>
-      <tr>
-        <td>Item Name</td><td>Oct 24, 2024</td>
-      </tr>
-      <tr>
-        <td>Item Name</td><td>Oct 17, 2024</td>
-      </tr>
-      <tr>
-        <td>Item Name</td><td>Oct 9, 2024</td>
-      </tr>
-      <tr>
-        <td>Item Name</td><td>Oct 9, 2024</td>
-      </tr>
-    </table>
+  </header>
+
+
+  <div class="main-content-container">
+    <div class="widget-container">
+      <!-- Widget Header with Tabs -->
+
+      <div class="widget-header">
+        <button class="tab-btn active">Book of the Month</button>
+        <img src="Images/Client3_Book2.png" class="book-otm-image">
+      </div>
+
+      <!-- List of Items as a Table -->
+
     </div>
+    <div class="widget-container">
+      <!-- Widget Header with Tabs -->
+
+      <div class="widget-header">
+        <button class="tab-btn active">Top Selling</button>
+        <button class="tab-btn">New Arrivals</button>
+      </div>
+
+      <!-- List of Items as a Table -->
+      <table class="item-table">
+
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td>Item Name 1</td>
+            <td>2024-01-12</td>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td>Item Name 2</td>
+            <td>2024-01-13</td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td>Item Name 3</td>
+            <td>2024-01-14</td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td>Item Name 4</td>
+            <td>2024-01-15</td>
+          </tr>
+
+          <!-- Row 5 -->
+          <tr>
+            <td>Item Name 5</td>
+            <td>2024-01-16</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="widget-container">
+      <!-- Widget Header with Tabs -->
+      <div class="widget-header">
+        <button class="tab-btn active">Featured Events</button>
+        <button class="tab-btn">Upcoming Events</button>
+      </div>
+
+      <!-- List of Items as a Table -->
+      <table class="item-table">
+
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td>Item Name 1</td>
+            <td>2024-01-12</td>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td>Item Name 2</td>
+            <td>2024-01-13</td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td>Item Name 3</td>
+            <td>2024-01-14</td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td>Item Name 4</td>
+            <td>2024-01-15</td>
+          </tr>
+
+          <!-- Row 5 -->
+          <tr>
+            <td>Item Name 5</td>
+            <td>2024-01-16</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <div style="display: none">
+
+    <div class="contact-form">
+      <form action="">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="country">Phone</label>
+        <input type="tel" id="phone" name="phone">
+        <div class="contact-type">
+          <div>
+              <input type="radio" id="contact-order" name="contact_type" value="Order">
+              <label for="html">Order Status</label><br>
+          </div>
+          <div>
+              <input type="radio" id="contact-status" name="contact_type" value="Status">
+              <label for="css">Product Request</label><br>
+          </div>
+
+          <div>
+              <input type="radio" id="contact-event" name="contact_type" value="Event">
+              <label for="javascript">Events</label>
+          </div>
+
+          <div>
+              <input type="radio" id="contact-other" name="contact_type" value="Other">
+              <label for="javascript">Other</label></div>
+        </div>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="How can we help you?" style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
+
+    <header>
+      <div class="header-left-column"><img class="header-logo" src="Images/Client3_LogoPalette1_FFF7EE.png"></div>
+      <div class="header-right-column">
+        <h1>Book Haven Bookstore</h1>
+        <h3>
+          <a href="/" aria-current="page">Home</a>
+          <a href="/" aria-current="page">Store</a>
+          <a href="/" aria-current="page">About</a>
+          <a href="/" aria-current="page">Events</a>
+        </h3>
+      </div>
+    </header>
+    <main>
+      <h1>Home page</h1>
+      <div class="item-list-widget">
+        <div class="item-list-options">
+          <div class="item-list-option">Top sellers</div>
+          <div class="item-list-option">New releases</div>
+          <div class="item-list-option">Sales</div>
+        </div>
+
+        <table>
+          <tr>
+            <td>Item Name</td>
+            <td>Oct 24, 2024</td>
+          </tr>
+          <tr>
+            <td>Item Name</td>
+            <td>Oct 24, 2024</td>
+          </tr>
+          <tr>
+            <td>Item Name</td>
+            <td>Oct 17, 2024</td>
+          </tr>
+          <tr>
+            <td>Item Name</td>
+            <td>Oct 9, 2024</td>
+          </tr>
+          <tr>
+            <td>Item Name</td>
+            <td>Oct 9, 2024</td>
+          </tr>
+        </table>
+      </div>
+  </div>
   </main>
+  <div class="footer-left-column">
+  </div>
+
+
+
+  </div>
+
   <footer>
-    <div class="footer-left-column">Contact us</div>
-    <div class="footer-center-column">Hours of operation</div>
-    <div class="footer-right-column">Socials</div>
+    <div class="footer-container">
+      <!-- Left Column: Newsletter Sign-Up -->
+      <div class="footer-left">
+        <h4>Sign Up for Our Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Center Column: Hours of Operation -->
+      <div class="footer-center">
+        <h4>Store Hours</h4>
+        <p>Mon - Fri: 9am-8pm</p>
+        <p>Sat: 10am-6pm</p>
+        <p>Sun: 11am-5pm</p>
+      </div>
+
+      <!-- Right Column: Social Media Links -->
+      <div class="footer-right">
+        <h4>Follow Us</h4>
+        <ul class="social-links">
+
+          <li><img
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-256.png">
+          </li>
+          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-256.png">
+          </li>
+          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Tumblr2_colored_svg-256.png">
+          </li>
+
+        </ul>
+      </div>
+    </div>
   </footer>
+
 </body>
 
 </html>
