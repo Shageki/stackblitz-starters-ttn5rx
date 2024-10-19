@@ -50,6 +50,11 @@ header {
   background: #C7B65E;
 }
 
+.header-logo {
+  width: 20%;
+}
+.header-column-right {flex-grow: 1;}
+
 footer {
   display: flex;
   text-align: center;
