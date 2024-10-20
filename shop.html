@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Home</title>
+  <title>Shop</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="styles.css" />
-  <script type="module" src="script.js"></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="Images/Client3_LogoPalette1_FFF7EE.png" alt="Book Haven Bookstore Logo">
+        <img src="Images/Client3_LogoPalette1_FFF7EE.png" alt="Book Haven Bookstore Logo" />
       </div>
       <div class="header-content">
         <h1>Book Haven Bookstore</h1>
@@ -30,129 +30,154 @@
     </div>
   </header>
 
-
-  <div class="main-content-container">
-    <div class="content-row">
-      <h1>Your neighborhood bookstore.</h1>
-    </div>
-    <div class="content-row">
-      <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form action="">
-          <label for="name">Name</label><br />
-          <input type="text" id="name" name="name"><br /><br />
-          <label for="email">Email</label><br />
-          <input type="email" id="email" name="email"><br /><br />
-          <label for="country">Phone</label><br />
-          <input type="tel" id="phone" name="phone"><br /><br />
-          <div class="contact-type">
-            <div>
-              <input type="radio" id="contact-order" name="contact_type" value="Order">
-              <label for="html">Order Status</label><br>
-            </div>
-            <div>
-              <input type="radio" id="contact-status" name="contact_type" value="Status">
-              <label for="css">Product Request</label><br>
-            </div>
-            <div>
-              <input type="radio" id="contact-event" name="contact_type" value="Event">
-              <label for="javascript">Events</label>
-            </div>
-            <div>
-              <input type="radio" id="contact-other" name="contact_type" value="Other">
-              <label for="javascript">Other</label>
-            </div><br />
-          </div>
-          <label for="subject">Subject</label><br />
-          <textarea id="subject" name="subject" placeholder="How can we help you?"
-            style="height:200px"></textarea><br /><br />
-          <input type="submit" value="Submit">
-        </form>
-      </div>
-      <div>        <h4>Store Hours</h4>
-        <p>Mon - Fri: 9am-8pm</p>
-        <p>Sat: 10am-6pm</p>
-        <p>Sun: 11am-5pm</p></div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-  <div style="display: none">
-
-
-
-
-
-    <header>
-      <div class="header-left-column"><img class="header-logo" src="Images/Client3_LogoPalette1_FFF7EE.png"></div>
-      <div class="header-right-column">
-        <h1>Book Haven Bookstore</h1>
-        <h3>
-          <a href="/" aria-current="page">Home</a>
-          <a href="/" aria-current="page">Store</a>
-          <a href="/" aria-current="page">About</a>
-          <a href="/" aria-current="page">Events</a>
-        </h3>
-      </div>
-    </header>
-    <main>
-      <h1>Home page</h1>
-      <div class="item-list-widget">
-        <div class="item-list-options">
-          <div class="item-list-option">Top sellers</div>
-          <div class="item-list-option">New releases</div>
-          <div class="item-list-option">Sales</div>
+  <main>
+    <div class="main-content-container">
+      <div class="content-row">
+        <div class="content-row-right">
+          <button class="view-cart-btn" onclick="viewCart()">View Cart</button>
         </div>
-
-        <table>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 24, 2024</td>
-          </tr>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 24, 2024</td>
-          </tr>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 17, 2024</td>
-          </tr>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 9, 2024</td>
-          </tr>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 9, 2024</td>
-          </tr>
-        </table>
+        <div id="cart-container" class="cart-container" style="display: none;">
+          <h3>Your Cart</h3>
+          <ul id="cart-items"></ul>
+          <button onclick="clearCart()">Clear Cart</button>
+          <button onclick="processOrder()">Process Order</button>
+          <button onclick="closeCart()">Close Cart</button>
+        </div>
       </div>
-  </div>
+
+      <div class="content-row">
+        <div class="card-widget">
+          <!-- Card 1 -->
+          <div class="card">
+            <h3 class="card-title">Book Title 1</h3>
+            <img src="Images/Client3_Book1.png" alt="Book Title 1" class="card-image" />
+            <div class="card-actions">
+              <button class="more-info-btn">More Info</button>
+              <button class="add-to-cart-btn" onclick='addToCart({ name: "Book Title 1", price: "$19.99" })'>Add to
+                Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <h3 class="card-title">Book Title 2</h3>
+            <img src="Images/Client3_Book2.png" alt="Book Title 2" class="card-image" />
+            <div class="card-actions">
+              <button class="more-info-btn">More Info</button>
+              <button class="add-to-cart-btn" onclick='addToCart({ name: "Book Title 2", price: "$19.99" })'>Add to
+                Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <h3 class="card-title">Book Title 3</h3>
+            <img src="Images/Client3_Book3.png" alt="Book Title 3" class="card-image" />
+            <div class="card-actions">
+              <button class="more-info-btn">More Info</button>
+              <button class="add-to-cart-btn" onclick='addToCart({ name: "Book Title 3", price: "$19.99" })'>Add to
+                Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <h3 class="card-title">Magazine 1</h3>
+            <img src="Images/Client3_Magazine1.png" alt="Magazine 1" class="card-image" />
+            <div class="card-actions">
+              <button class="more-info-btn">More Info</button>
+              <button class="add-to-cart-btn" onclick='addToCart({ name: "Magazine 1", price: "$9.99" })'>Add to
+                Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card">
+            <h3 class="card-title">Magazine 2</h3>
+            <img src="Images/Client3_Magazine2.png" alt="Magazine 2" class="card-image" />
+            <div class="card-actions">
+              <button class="more-info-btn">More Info</button>
+              <button class="add-to-cart-btn" onclick='addToCart({ name: "Magazine 2", price: "$9.99" })'>Add to
+                Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card">
+            <h3 class="card-title">Magazine 3</h3>
+            <img src="Images/Client3_Magazine3.png" alt="Magazine 3" class="card-image" />
+            <div class="card-actions">
+              <button class="more-info-btn">More Info</button>
+              <button class="add-to-cart-btn" onclick='addToCart({ name: "Magazine 3", price: "$9.99" })'>Add to
+                Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="card">
+            <h3 class="card-title">Notebook</h3>
+            <img src="Images/Client3_Notebook.png" alt="Notebook" class="card-image" />
+            <div class="card-actions">
+              <button class="more-info-btn">More Info</button>
+              <button class="add-to-cart-btn" onclick='addToCart({ name: "Notebook", price: "$14.99" })'>Add to
+                Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="card">
+            <h3 class="card-title">Stickers</h3>
+            <img src="Images/Client3_Stickers.png" alt="Stickers" class="card-image" />
+            <div class="card-actions">
+              <button class="more-info-btn">More Info</button>
+              <button class="add-to-cart-btn" onclick='addToCart({ name: "Stickers", price: "$4.99" })'>Add to
+                Cart</button>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="card">
+            <h3 class="card-title">Tote Bag</h3>
+            <img src="Images/Client3_ToteBag.png" alt="Tote Bag" class="card-image" />
+            <div class="card-actions">
+              <button class="more-info-btn">More Info</button>
+              <button class="add-to-cart-btn" onclick='addToCart({ name: "Tote Bag", price: "$24.99" })'>Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-row">
+      <div class="genres-container">
+        <div class="genre"><button>Fantasy</button></div>
+        <div class="genre"><button>Science Fiction</button></div>
+        <div class="genre"><button>Mystery</button></div>
+        <div class="genre"><button>Romance</button></div>
+        <div class="genre"><button>Thriller</button></div>
+        <div class="genre"><button>Horror</button></div>
+        <div class="genre"><button>Historical Fiction</button></div>
+        <div class="genre"><button>Non-fiction</button></div>
+        <div class="genre"><button>Biography</button></div>
+        <div class="genre"><button>Drama</button></div>
+        <div class="genre"><button>Poetry</button></div>
+        <div class="genre"><button>Young Adult</button></div>
+      </div>
+    </div>
+    <br />
   </main>
-  <div class="footer-left-column">
-  </div>
-
-
-
-  </div>
 
   <footer>
     <div class="footer-container">
-      <!-- Left Column: Newsletter Sign-Up -->
       <div class="footer-left">
         <h4>Sign Up for Our Newsletter</h4>
         <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" required>
+          <input type="email" placeholder="Enter your email" required />
           <button type="submit">Subscribe</button>
         </form>
       </div>
 
-      <!-- Center Column: Hours of Operation -->
       <div class="footer-center">
         <h4>Store Hours</h4>
         <p>Mon - Fri: 9am-8pm</p>
@@ -160,19 +185,16 @@
         <p>Sun: 11am-5pm</p>
       </div>
 
-      <!-- Right Column: Social Media Links -->
       <div class="footer-right">
         <h4>Follow Us</h4>
         <ul class="social-links">
-
           <li><img
-              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-256.png">
-          </li>
-          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-256.png">
-          </li>
-          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Tumblr2_colored_svg-256.png">
-          </li>
-
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-256.png"
+              alt="Facebook" /></li>
+          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-256.png"
+              alt="Instagram" /></li>
+          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Tumblr2_colored_svg-256.png"
+              alt="Tumblr" /></li>
         </ul>
       </div>
     </div>

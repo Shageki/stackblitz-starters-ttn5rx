@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Home</title>
+  <title>Events</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="styles.css" />
@@ -14,7 +14,7 @@
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="Images/Client3_LogoPalette1_FFF7EE.png" alt="Book Haven Bookstore Logo">
+        <img src="Images/Client3_LogoPalette1_FFF7EE.png" alt="Book Haven Bookstore Logo" />
       </div>
       <div class="header-content">
         <h1>Book Haven Bookstore</h1>
@@ -30,241 +30,139 @@
     </div>
   </header>
 
-
-  <div class="main-content-container">
-    <div class="content-row">
-      <h1>Your neighborhood bookstore.</h1>
-    </div>
-    <div class="content-row">
-      <button class="tab-btn">
-        <h2>Browse the shop</h2>
-      </button>
-    </div>
-    <br />
-    <div class="content-row">
-      <div class="widget-container">
-        <div class="widget-header">
-          <div class="book-otm">
-            <button class="tab-btn active">Book of the Month</button>
-            <img src="Images/Client3_Book2.png" class="book-otm-image">
+  <main>
+    <div class="main-content-container">
+      <div class="content-row">
+        <div class="widget-container">
+          <div class="widget-header">
+            <div class="book-otm">
+              <button class="tab-btn active">Featured Event</button>
+              <img src="Images/Client3_Book2.png" class="book-otm-image" alt="Featured Event" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="widget-container">
-        <div class="widget-header">
-          <button class="tab-btn active">Top Selling</button>
-          <button class="tab-btn">New Arrivals</button>
+
+        <div class="widget-container">
+          <div class="widget-header">
+            <button class="tab-btn active">Featured Events</button>
+            <button class="tab-btn">Upcoming Events</button>
+          </div>
+          <table class="item-table">
+            <tbody>
+              <tr>
+                <td>Item Name 1</td>
+                <td>2024-01-12</td>
+              </tr>
+              <tr>
+                <td>Item Name 2</td>
+                <td>2024-01-13</td>
+              </tr>
+              <tr>
+                <td>Item Name 3</td>
+                <td>2024-01-14</td>
+              </tr>
+              <tr>
+                <td>Item Name 4</td>
+                <td>2024-01-15</td>
+              </tr>
+              <tr>
+                <td>Item Name 5</td>
+                <td>2024-01-16</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <table class="item-table">
-          <tbody>
-            <tr>
-              <td>Item Name 1</td>
-              <td>2024-01-12</td>
-            </tr>
-            <tr>
-              <td>Item Name 2</td>
-              <td>2024-01-13</td>
-            </tr>
-            <tr>
-              <td>Item Name 3</td>
-              <td>2024-01-14</td>
-            </tr>
-            <tr>
-              <td>Item Name 4</td>
-              <td>2024-01-15</td>
-            </tr>
-            <tr>
-              <td>Item Name 5</td>
-              <td>2024-01-16</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
-      <div class="widget-container">
-        <div class="widget-header">
-          <button class="tab-btn active">Featured Events</button>
-          <button class="tab-btn">Upcoming Events</button>
+
+      <div class="content-row">
+        <div class="calendar-widget">
+          <div class="month">
+            <h2>October 2024</h2>
+          </div>
+
+          <table class="calendar-table">
+            <thead>
+              <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="day-number">1</span></td>
+                <td><span class="day-number">2</span></td>
+                <td><span class="day-number">3</span><br />
+                  <div class="event">Book Fair</div>
+                </td>
+                <td><span class="day-number">4</span></td>
+              </tr>
+              <tr>
+                <td><span class="day-number">5</span></td>
+                <td><span class="day-number">6</span></td>
+                <td><span class="day-number">7</span></td>
+                <td><span class="day-number">8</span></td>
+                <td><span class="day-number">9</span></td>
+                <td><span class="day-number">10</span></td>
+                <td><span class="day-number">11</span><br />
+                  <div class="event">Book Signing</div>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="day-number">12</span></td>
+                <td><span class="day-number">13</span></td>
+                <td><span class="day-number">14</span><br />
+                  <div class="event">Author Talk</div>
+                </td>
+                <td><span class="day-number">15</span></td>
+                <td><span class="day-number">16</span></td>
+                <td><span class="day-number">17</span></td>
+                <td><span class="day-number">18</span></td>
+              </tr>
+              <tr>
+                <td><span class="day-number">19</span></td>
+                <td><span class="day-number">20</span><br />
+                  <div class="event">New Book Release</div>
+                </td>
+                <td><span class="day-number">21</span></td>
+                <td><span class="day-number">22</span></td>
+                <td><span class="day-number">23</span></td>
+                <td><span class="day-number">24</span></td>
+                <td><span class="day-number">25</span></td>
+              </tr>
+              <tr>
+                <td><span class="day-number">26</span></td>
+                <td><span class="day-number">27</span></td>
+                <td><span class="day-number">28</span></td>
+                <td><span class="day-number">29</span></td>
+                <td><span class="day-number">30</span></td>
+                <td><span class="day-number">31</span></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <table class="item-table">
-          <tbody>
-            <tr>
-              <td>Item Name 1</td>
-              <td>2024-01-12</td>
-            </tr>
-            <tr>
-              <td>Item Name 2</td>
-              <td>2024-01-13</td>
-            </tr>
-            <tr>
-              <td>Item Name 3</td>
-              <td>2024-01-14</td>
-            </tr>
-            <tr>
-              <td>Item Name 4</td>
-              <td>2024-01-15</td>
-            </tr>
-            <tr>
-              <td>Item Name 5</td>
-              <td>2024-01-16</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
-  <div class="content-row">
-    <div class="genres-container">
-      <div class="genre">
-          <button>Fantasy</button>
-      </div>
-      <div class="genre">
-          <button>Science Fiction</button>
-      </div>
-      <div class="genre">
-          <button>Mystery</button>
-      </div>
-      <div class="genre">
-          <button>Romance</button>
-      </div>
-      <div class="genre">
-          <button>Thriller</button>
-      </div>
-      <div class="genre">
-          <button>Horror</button>
-      </div>
-      <div class="genre">
-          <button>Historical Fiction</button>
-      </div>
-      <div class="genre">
-          <button>Non-fiction</button>
-      </div>
-      <div class="genre">
-          <button>Biography</button>
-      </div>
-      <div class="genre">
-          <button>Drama</button>
-      </div>
-      <div class="genre">
-          <button>Poetry</button>
-      </div>
-      <div class="genre">
-          <button>Young Adult</button>
-      </div>
-  </div>
-  </div>
-<br/>
-  </div>
-
-
-
-
-
-
-
-  <div style="display: none">
-
-    <div class="contact-form">
-      <form action="">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email">
-
-        <label for="country">Phone</label>
-        <input type="tel" id="phone" name="phone">
-        <div class="contact-type">
-          <div>
-              <input type="radio" id="contact-order" name="contact_type" value="Order">
-              <label for="html">Order Status</label><br>
-          </div>
-          <div>
-              <input type="radio" id="contact-status" name="contact_type" value="Status">
-              <label for="css">Product Request</label><br>
-          </div>
-
-          <div>
-              <input type="radio" id="contact-event" name="contact_type" value="Event">
-              <label for="javascript">Events</label>
-          </div>
-
-          <div>
-              <input type="radio" id="contact-other" name="contact_type" value="Other">
-              <label for="javascript">Other</label></div>
-        </div>
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="How can we help you?" style="height:200px"></textarea>
-
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-
-
-
-    <header>
-      <div class="header-left-column"><img class="header-logo" src="Images/Client3_LogoPalette1_FFF7EE.png"></div>
-      <div class="header-right-column">
-        <h1>Book Haven Bookstore</h1>
-        <h3>
-          <a href="/" aria-current="page">Home</a>
-          <a href="/" aria-current="page">Store</a>
-          <a href="/" aria-current="page">About</a>
-          <a href="/" aria-current="page">Events</a>
-        </h3>
-      </div>
-    </header>
-    <main>
-      <h1>Home page</h1>
-      <div class="item-list-widget">
-        <div class="item-list-options">
-          <div class="item-list-option">Top sellers</div>
-          <div class="item-list-option">New releases</div>
-          <div class="item-list-option">Sales</div>
-        </div>
-
-        <table>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 24, 2024</td>
-          </tr>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 24, 2024</td>
-          </tr>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 17, 2024</td>
-          </tr>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 9, 2024</td>
-          </tr>
-          <tr>
-            <td>Item Name</td>
-            <td>Oct 9, 2024</td>
-          </tr>
-        </table>
-      </div>
-  </div>
   </main>
-  <div class="footer-left-column">
-  </div>
-
-
-
-  </div>
 
   <footer>
     <div class="footer-container">
-      <!-- Left Column: Newsletter Sign-Up -->
       <div class="footer-left">
         <h4>Sign Up for Our Newsletter</h4>
         <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" required>
+          <input type="email" placeholder="Enter your email" required />
           <button type="submit">Subscribe</button>
         </form>
       </div>
 
-      <!-- Center Column: Hours of Operation -->
       <div class="footer-center">
         <h4>Store Hours</h4>
         <p>Mon - Fri: 9am-8pm</p>
@@ -272,19 +170,16 @@
         <p>Sun: 11am-5pm</p>
       </div>
 
-      <!-- Right Column: Social Media Links -->
       <div class="footer-right">
         <h4>Follow Us</h4>
         <ul class="social-links">
-
           <li><img
-              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-256.png">
-          </li>
-          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-256.png">
-          </li>
-          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Tumblr2_colored_svg-256.png">
-          </li>
-
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-256.png"
+              alt="Facebook" /></li>
+          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-256.png"
+              alt="Instagram" /></li>
+          <li><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Tumblr2_colored_svg-256.png"
+              alt="Tumblr" /></li>
         </ul>
       </div>
     </div>

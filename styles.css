@@ -1,10 +1,11 @@
+/* General Styles */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: arial, sans-serif;
+  font-family: Arial, sans-serif;
   color: #131C26;
   background-color: #FFF7EE;
 }
@@ -35,9 +36,10 @@ p {
   margin: 2px;
 }
 
+/* Contact Form */
 .contact-form {
   text-align: left;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -46,6 +48,7 @@ p {
   flex-direction: column;
 }
 
+/* Footer */
 footer {
   background-color: #2E4057;
   padding: 10px 0;
@@ -75,10 +78,6 @@ footer {
 
 .footer-right {
   text-align: right;
-}
-
-.footer-left,
-.footer-right {
   width: fit-content;
 }
 
@@ -125,30 +124,7 @@ footer {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .newsletter-form {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-}
-
+/* Header */
 header {
   background-color: #2E4057;
   color: #FFF7EE;
@@ -172,7 +148,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 0 10px;
+  margin-left: 10px;
 }
 
 header h1 {
@@ -185,7 +161,7 @@ nav {
 }
 
 .nav-links {
-  list-style-type: none;
+  list-style: none;
   display: flex;
   gap: 20px;
   padding: 0;
@@ -205,23 +181,7 @@ nav {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .header-content {
-    align-items: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
+/* Widget and Table */
 .widget-container {
   width: 33%;
   padding: 10px;
@@ -284,6 +244,7 @@ nav {
   color: #C7B65E;
 }
 
+/* Main Content */
 .main-content-container {
   display: flex;
   flex-direction: column;
@@ -293,10 +254,29 @@ nav {
 .content-row {
   display: flex;
   flex-direction: row;
+  margin: 0 10px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.content-row>div {
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Books & Genres */
+.book-otm {
+  text-align: left;
 }
 
 .book-otm-image {
   max-width: 100%;
+}
+
+.blurb {
+  margin: 0 30px;
+  max-width: 500px;
 }
 
 .genres-container {
@@ -325,4 +305,246 @@ nav {
 button:hover {
   background-color: #F7B3CC;
   color: #2E4057;
+}
+
+/* Calendar Widget */
+.calendar-widget {
+  width: 100%;
+  margin: 0 30px;
+  padding: 20px;
+}
+
+.month h2 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2E4057;
+  margin-bottom: 20px;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1em;
+}
+
+.calendar-table th {
+  background-color: #2E4057;
+  color: #FFF7EE;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.calendar-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  aspect-ratio: 1 / 1;
+  width: calc(100% / 7);
+  vertical-align: top;
+  position: relative;
+}
+
+.day-number {
+  font-weight: bold;
+  display: block;
+}
+
+.event {
+  background-color: #EE583F;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  margin-top: 5px;
+}
+
+.calendar-table td:hover {
+  background-color: #F7B3CC;
+  cursor: pointer;
+}
+
+.calendar-table th:hover {
+  background-color: #2E4057;
+  cursor: default;
+}
+
+/* Cards */
+.card-widget {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(33% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  min-width: 200px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #2E4057;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.more-info-btn {
+  background-color: #2E4057;
+  color: #FFF7EE;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.more-info-btn:hover {
+  background-color: #F7B3CC;
+}
+
+.add-to-cart-btn {
+  background-color: #EE583F;
+  color: #FFF7EE;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #F7B3CC;
+}
+
+/* Buttons */
+.view-cart-btn {
+  background-color: #EE583F;
+  color: #FFF7EE;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-cart-btn:hover {
+  background-color: #C7B65E;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-row-right {
+  display: flex;
+  justify-content: right;
+  margin: 10px;
+}
+
+/* Cart */
+.cart-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.cart-container h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #2E4057;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#cart-items li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1em;
+  color: #131C26;
+}
+
+#cart-items li:last-child {
+  border-bottom: none;
+}
+
+.cart-container button {
+  padding: 10px 20px;
+  background-color: #EE583F;
+  color: #FFF7EE;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.cart-container button:hover {
+  background-color: #C7B65E;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+  .footer-container,
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
