@@ -29,17 +29,16 @@ h3 {
 
 h4 {
   margin: 5px;
-
 }
 
 p {
   margin: 2px;
 }
 
-
 .contact-form {
   text-align: left;
-
+  display:flex;
+  flex-direction: column;
 }
 
 .contact-type {
@@ -47,10 +46,6 @@ p {
   flex-direction: column;
 }
 
-
-
-
-/* Footer Styles */
 footer {
   background-color: #2E4057;
   padding: 10px 0;
@@ -154,8 +149,6 @@ footer {
   }
 }
 
-
-/* Header Styles */
 header {
   background-color: #2E4057;
   color: #FFF7EE;
@@ -204,6 +197,10 @@ nav {
   font-weight: bold;
 }
 
+.nav-active {
+  color: #C7B65E !important;
+}
+
 .nav-links li a:hover {
   text-decoration: underline;
 }
@@ -225,94 +222,67 @@ nav {
   }
 }
 
-
-
-
-/* Widget Container */
 .widget-container {
   width: 33%;
-  /* Takes about one-third of the horizontal width */
   padding: 10px;
-  /* Reduced padding */
 }
 
-/* Widget Header (Tabs) */
 .widget-header {
   display: flex;
   justify-content: flex-start;
-  /* Align tabs to the left */
   margin-bottom: 10px;
-  /* Reduce spacing between tabs and content */
 }
 
 .tab-btn {
   background-color: #2E4057;
-  /* Inkwell Blue */
   color: #FFF7EE;
-  /* Parchment White */
   border: none;
   padding: 5px 10px;
-  /* Reduced padding for a more compact tab style */
   cursor: pointer;
   border-radius: 3px 3px 0 0;
   margin-right: 5px;
-  /* Small space between tabs */
   font-size: 0.85em;
-  /* Smaller font for tabs */
   outline: none;
 }
 
 .tab-btn.active {
   background-color: #EE583F;
-  /* Intensity Indigo for active tab */
 }
 
 .tab-btn:hover {
   background-color: #F7B3CC;
-  /* Aged Gold on hover */
-  color: #131C26
+  color: #131C26;
 }
 
-/* Table Styling */
 .item-table {
   width: 100%;
   border-collapse: collapse;
-  /* Removes gaps between table cells */
   background-color: #FFF7EE;
-  /* Parchment White for table background */
 }
 
 .item-table th,
 .item-table td {
   padding: 10px;
-  /* Reduced padding to keep space compact */
   text-align: left;
 }
 
 .item-table td {
   font-size: 0.85em;
-  /* Slightly smaller font for table data */
 }
 
-/* Hover Effects */
 .item-table tbody tr:hover {
   background-color: #F7B3CC;
-  /* Dusty Rose on hover */
 }
 
-/* Date Styling (Right-aligned) */
 .item-table td:last-child {
   text-align: right;
   font-style: italic;
   color: #131C26;
-  /* Bookish Black for date */
 }
 
 .item-table td:last-child:hover {
   color: #C7B65E;
-  /* Aged Gold on hover for date */
 }
-
 
 .main-content-container {
   display: flex;
@@ -327,4 +297,32 @@ nav {
 
 .book-otm-image {
   max-width: 100%;
+}
+
+.genres-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.genre {
+  flex: 1 1 150px;
+  text-align: center;
+}
+
+.genre button {
+  padding: 10px 15px;
+  background-color: #2E4057;
+  color: #FFF7EE;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #F7B3CC;
+  color: #2E4057;
 }
